@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 interface WeatherForecast {
   date: string;
@@ -9,14 +8,15 @@ interface WeatherForecast {
   summary: string;
 }
 
+
 @Component({
-  selector: 'app-root',
+  selector: 'app-weather',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [],
+  templateUrl: './weather.component.html',
+  styleUrl: './weather.component.scss'
 })
-export class AppComponent implements OnInit {
+export class WeatherComponent implements OnInit{
   public forecasts: WeatherForecast[] = [];
 
   constructor(private http: HttpClient) {}
@@ -38,4 +38,5 @@ export class AppComponent implements OnInit {
 
   title = 'angularapp1.client';
 }
+
 
