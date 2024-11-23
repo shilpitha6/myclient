@@ -6,6 +6,8 @@
   
         <a mat-flat-button color="primary" [routerLink]="['/countries']">Countries</a>
         <a mat-flat-button color="primary" [routerLink]="['/cities']">Cities</a>
+        <span class="separator"></span>
+        <a mat-flat-button color ="primary" (click) = "onLogout()">Logout</a>
         <a mat-flat-button color="primary" [routerLink]="['/login']">Login</a>
     </mat-toolbar>
   </header>

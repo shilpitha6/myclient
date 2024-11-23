@@ -39,6 +39,9 @@ this.AuthService.login(loginRequest).subscribe(
     next: result => {
       LoginRespond = result;
       console.log(LoginRespond);
+      if (result.success){
+        localStorage.setItem("tokenValue", result.token);
+      }
     },
     error:e => console.error(e)
   }
