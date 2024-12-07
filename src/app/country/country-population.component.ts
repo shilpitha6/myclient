@@ -13,9 +13,7 @@ import { CountryPopulation } from './country-population';
 })
 export class CountryPopulationComponent implements OnInit {
 id: number = -1;
-public CountryPopulation!: CountryPopulation;
-
-
+public CountryPopulation: CountryPopulation | undefined;
   constructor(private http: HttpClient,private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     let idParam = this.activatedRoute.snapshot.paramMap.get("id");

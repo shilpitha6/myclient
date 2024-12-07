@@ -20,6 +20,7 @@ import { LoginRespond } from './login-respond';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit{
+  router: any;
   
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -41,12 +42,15 @@ this.AuthService.login(loginRequest).subscribe(
       console.log(LoginRespond);
       if (result.success){
         localStorage.setItem("tokenValue", result.token);
+        this.router.navigate(["/"]);
+        
       }
     },
     error:e => console.error(e)
   }
 );
 }
+
   constructor(private AuthService : AuthService){
 
   }

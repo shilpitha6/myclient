@@ -1,1 +1,8 @@
-<p>country-population works!</p>
+<h3>country population</h3>
+@if(CountryPopulation) {
+    <p>((CountryPopulation.name))</p>
+    <p>((CountryPopulation.population))</p>
+}@else
+{
+    <p>didnt load</p>
+}

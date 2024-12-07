@@ -9,6 +9,7 @@ import { environment } from '../../environments/environment.development';
   providedIn: 'root'
 })
 export class AuthService {
+  static authStatus: any;
 
   constructor(private http: HttpClient) { }
 
